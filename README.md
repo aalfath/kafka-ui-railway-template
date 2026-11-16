@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/kafka-ui-1?utm_medium=integration&utm_source=button&utm_campaign=kafka-ui)
+
 # Kafka UI on Railway
 
 [Kafka UI](https://github.com/kafbat/kafka-ui) (kafbat) 1.5.0 for Railway: a web console to browse topics, messages, consumer groups, brokers, schemas and connectors of an Apache Kafka or Redpanda cluster. It is meant as an add-on for a Kafka or Redpanda service that already runs in your Railway project, and talks to it over the private network.
@@ -18,7 +20,7 @@ One service, **Kafka UI**, built from this repository:
 |---|---|---|
 | `KAFKA_BOOTSTRAP_SERVERS` | empty (optional) | Bootstrap address of your cluster, for example `${{Kafka.RAILWAY_PRIVATE_DOMAIN}}:9092`. Leave it empty to add clusters in the UI |
 | `SPRING_SECURITY_USER_NAME` | `admin` | Login user |
-| `SPRING_SECURITY_USER_PASSWORD` | generated (24 characters) | Login password. Find it in the service's Variables tab |
+| `SPRING_SECURITY_USER_PASSWORD` | generated (32 characters) | Login password. Find it in the service's Variables tab |
 | `PORT` | `8080` | Port the web UI listens on |
 
 Optional settings (add them as variables on the service):
