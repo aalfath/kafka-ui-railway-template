@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0-1 (2026-11-16)
+
+No breaking changes. Documentation only: nothing in the image or start script changed.
+
+- README: Deploy on Railway button for the published template (`kafka-ui-1`).
+- README: the generated password has 32 characters, not 24.
+
 ## 1.5.0 (2026-11-16)
 
 First release of the template.
