@@ -2,13 +2,13 @@
 
 # Kafka UI on Railway
 
-[Kafka UI](https://github.com/kafbat/kafka-ui) (kafbat) 1.5.0 for Railway: a web console to browse topics, messages, consumer groups, brokers, schemas and connectors of an Apache Kafka or Redpanda cluster. It is meant as an add-on for a Kafka or Redpanda service that already runs in your Railway project, and talks to it over the private network.
+[Kafka UI](https://github.com/kafbat/kafka-ui) (kafbat) 1.5.1 for Railway: a web console to browse topics, messages, consumer groups, brokers, schemas and connectors of an Apache Kafka or Redpanda cluster. It is meant as an add-on for a Kafka or Redpanda service that already runs in your Railway project, and talks to it over the private network.
 
 ## What the template deploys
 
 One service, **Kafka UI**, built from this repository:
 
-- **Image:** `ghcr.io/kafbat/kafka-ui:v1.5.0@sha256:7cda86a33344160309fdb65146332e4da65db81a945614f2fe32e210803f6fd1`, wrapped by a small start script (`start.sh`).
+- **Image:** `ghcr.io/kafbat/kafka-ui:v1.5.1@sha256:c0585fdfed6a9b8adedc3b0965113d4a84f292d61e58a2c7dcc603394defb7d1`, wrapped by a small start script (`start.sh`).
 - **Login:** form login is always on. The start script refuses to start with no password, a password shorter than 12 characters, or `AUTH_TYPE=DISABLED`.
 - **Volume** at `/etc/kafkaui`: clusters you add or edit in the UI (`dynamic_config.yaml`) and uploaded files (truststores, keystores). They survive redeploys.
 - **Health check** on `/actuator/health` (no login needed).

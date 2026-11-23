@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.1 (2026-11-23)
+
+- Breaking change upstream, only if you set up OAuth2 **resource server** mode yourself: RBAC now also applies to bearer-token requests. The template's default login form (`AUTH_TYPE=LOGIN_FORM`) is not affected.
+- Security release: hardened RBAC (GHSA-g5jv-4pv5-fwjq) and config validation (GHSA-fm4j-84h9-xw5v, GHSA-cc2g-3hxq-q686), and a new Java base image for CVE-2026-114938. No new variables. See the [v1.5.1 release notes](https://github.com/kafbat/kafka-ui/releases/tag/v1.5.1).
+- Kafka UI v1.5.0 → **v1.5.1** (`ghcr.io/kafbat/kafka-ui:v1.5.1@sha256:c0585fdfed6a9b8adedc3b0965113d4a84f292d61e58a2c7dcc603394defb7d1`).
+- Tested on Railway before merging: the published template was deployed, data was written, the service was switched to this version, and the data and login were still there.
+
 ## 1.5.0-1 (2026-11-16)
 
 No breaking changes. Documentation only: nothing in the image or start script changed.
